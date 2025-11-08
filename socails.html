@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Social Links</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #0a0a0a);
+      background-size: 400% 400%;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: bgMove 8s ease infinite;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    #cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px;
+      justify-content: center;
+    }
+
+    .card {
+      background: rgba(20, 20, 20, 0.9);
+      border-radius: 20px;
+      width: 250px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 0 30px rgba(255,255,255,0.5);
+    }
+
+    .card_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card_content i {
+      font-size: 60px;
+      margin-bottom: 5px;
+    }
+
+    .card_content h2 {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      letter-spacing: 0.5px;
+    }
+
+    .card_content a {
+      color: white;
+      text-decoration: none;
+      border: 1px solid white;
+      padding: 3px 8px;          /* smaller button size */
+      font-size: 0.75rem;        /* smaller text */
+      border-radius: 6px;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .card_content a:hover {
+      background: white;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    /* Individual hover glow colors */
+    .instagram:hover { box-shadow: 0 0 30px #e1306c; }
+    .snapchat:hover { box-shadow: 0 0 30px #fffc00; }
+    .github:hover { box-shadow: 0 0 30px #6e5494; }
+    .linkedin:hover { box-shadow: 0 0 30px #0077b5; }
+
+  </style>
+</head>
+<body>
+  <div id="cards">
+
+    <div class="card instagram">
+      <div class="card_content">
+        <i class="fa-brands fa-instagram"></i>
+        <h2>Instagram</h2>
+        <a href="YOUR_INSTAGRAM_LINK" target="_blank">
+          <i class="fa-solid fa-link"></i> Follow Me
+        </a>
+      </div>
+    </div>
+
+    <div class="card snapchat">
+      <div class="card_content">
+        <i class="fa-brands fa-snapchat"></i>
+        <h2>Snapchat</h2>
+        <a href="YOUR_SNAPCHAT_LINK" target="_blank">
+          <i class="fa-solid fa-link"></i> Add Me
+        </a>
+      </div>
+    </div>
+
+    <div class="card github">
+      <div class="card_content">
+        <i class="fa-brands fa-github"></i>
+        <h2>GitHub</h2>
+        <a href="YOUR_GITHUB_LINK" target="_blank">
+          <i class="fa-solid fa-link"></i> Visit
+        </a>
+      </div>
+    </div>
+
+    <div class="card linkedin">
+      <div class="card_content">
+        <i class="fa-brands fa-linkedin"></i>
+        <h2>LinkedIn</h2>
+        <a href="YOUR_LINKEDIN_LINK" target="_blank">
+          <i class="fa-solid fa-link"></i> Connect With Me
+        </a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
