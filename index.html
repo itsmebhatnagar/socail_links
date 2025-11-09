@@ -32,16 +32,22 @@
 
     #cards {
       display: flex;
-      flex-wrap: wrap;
-      gap: 35px;
       justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: nowrap;
+      width: 100%;
+      max-width: 100%;
+      padding: 0 10px;
     }
 
     .card {
       background: rgba(20, 20, 20, 0.9);
-      border-radius: 20px;
-      width: 250px;
-      height: 300px;
+      border-radius: 15px;
+      width: 22%;
+      max-width: 160px;
+      min-width: 120px;
+      aspect-ratio: 3/4;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -52,25 +58,25 @@
     }
 
     .card:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 0 30px rgba(255,255,255,0.5);
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 0 25px rgba(255,255,255,0.5);
     }
 
     .card_content {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 8px;
     }
 
     .card_content i {
-      font-size: 60px;
-      margin-bottom: 5px;
+      font-size: 40px;
+      margin-bottom: 4px;
     }
 
     .card_content h2 {
-      font-size: 1.4rem;
-      margin-bottom: 5px;
+      font-size: 0.9rem;
+      margin-bottom: 2px;
       letter-spacing: 0.5px;
     }
 
@@ -78,8 +84,8 @@
       color: white;
       text-decoration: none;
       border: 1px solid white;
-      padding: 3px 8px;          /* smaller button size */
-      font-size: 0.75rem;        /* smaller text */
+      padding: 2px 6px;
+      font-size: 0.7rem;
       border-radius: 6px;
       transition: all 0.3s;
       display: inline-flex;
@@ -93,23 +99,41 @@
       transform: scale(1.05);
     }
 
-    /* Individual hover glow colors */
-    .instagram:hover { box-shadow: 0 0 30px #e1306c; }
-    .snapchat:hover { box-shadow: 0 0 30px #fffc00; }
-    .github:hover { box-shadow: 0 0 30px #6e5494; }
-    .linkedin:hover { box-shadow: 0 0 30px #0077b5; }
+    /* Hover glow colors */
+    .instagram:hover { box-shadow: 0 0 25px #e1306c; }
+    .snapchat:hover { box-shadow: 0 0 25px #fffc00; }
+    .github:hover { box-shadow: 0 0 25px #6e5494; }
+    .linkedin:hover { box-shadow: 0 0 25px #0077b5; }
 
+    /* Responsive: keep all 4 in a single line always */
+    @media (max-width: 768px) {
+      .card {
+        width: 22%;
+        max-width: none;
+      }
+      .card_content i { font-size: 35px; }
+      .card_content h2 { font-size: 0.8rem; }
+      .card_content a { font-size: 0.6rem; padding: 2px 5px; }
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        width: 23%;
+      }
+      .card_content i { font-size: 30px; }
+      .card_content h2 { font-size: 0.7rem; }
+      .card_content a { font-size: 0.55rem; padding: 1px 4px; }
+    }
   </style>
 </head>
 <body>
   <div id="cards">
-
     <div class="card instagram">
       <div class="card_content">
         <i class="fa-brands fa-instagram"></i>
         <h2>Instagram</h2>
         <a href="https://www.instagram.com/urs.bhatnagar?igsh=MXBtMHl5am5sOGd4eA==" target="_blank">
-          <i class="fa-solid fa-link"></i> Follow Me
+          <i class="fa-solid fa-link"></i> Follow
         </a>
       </div>
     </div>
@@ -119,7 +143,7 @@
         <i class="fa-brands fa-snapchat"></i>
         <h2>Snapchat</h2>
         <a href="https://www.snapchat.com/add/urs.bhatnagar?share_id=hM8hB68KWbs&locale=en-GB" target="_blank">
-          <i class="fa-solid fa-link"></i> Add Me
+          <i class="fa-solid fa-link"></i> Add
         </a>
       </div>
     </div>
@@ -139,11 +163,10 @@
         <i class="fa-brands fa-linkedin"></i>
         <h2>LinkedIn</h2>
         <a href="https://www.linkedin.com/in/harshil-bhatnagar-086a79360?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
-          <i class="fa-solid fa-link"></i> Connect With Me
+          <i class="fa-solid fa-link"></i> Connect
         </a>
       </div>
     </div>
-
   </div>
 </body>
 </html>
